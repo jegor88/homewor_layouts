@@ -1,0 +1,206 @@
+/*
+*** Overall styles ***
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url(../image/float_bg.jpg);
+  background-size: cover;
+}
+
+/*
+*** First section styles ***
+*/
+
+.wrapper {
+  background-color: rgba(46, 37, 37, 0.95);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.3);
+  width: 70vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* 
+Heading styles 
+*/
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 60px auto;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 3%;
+  height: 0.5px;
+  width: 94%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*
+*** Navigation ***
+*/
+
+.navi {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 3%;
+  text-transform: uppercase;
+}
+
+.navi-btn {
+  float: right;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 2px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navi-btn:hover {
+  border: 1px solid rgb(184, 104, 0);
+  background-color: rgb(184, 104, 0);
+}
+
+.btn-color {
+  color:rgb(184, 104, 0);
+  font-weight: 700;
+}
+
+.navi-btn:hover .btn-color {
+transition: all .3s;
+color: rgb(255, 255, 255);
+}
+
+/*
+*** NEWS ***
+*/
+
+.news {
+display: flex;
+text-align: justify;
+justify-content: center;
+}
+
+.unit {
+  padding: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.flex_1{
+  margin-left: 3%;
+}
+
+.flex_3{
+  margin-right: 3%;
+}
+
+.flex_2 {
+  margin: 0 5px;
+}
+
+.right {
+  margin: 0 3% 0 5px;
+}
+
+.left {
+  margin: 0 5px 0 3%;
+}
+
+/* 
+Banner 
+*/
+
+.banner {
+  text-align: center;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin: 35px 0;
+  padding: 35px 0;;
+}
+
+.img_banner {
+  width: 30vw;
+}
+
+/* 
+Footer 
+*/
+
+footer {
+  background-color: rgba(0,0,0,0.8);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding-top: 8vh;
+  font-size: 32px;
+  padding-bottom: 5%;
+  margin-top: 35px;
+}
+
+.footer_text {
+  font-family: 'Ranchers', cursive;
+}
+
+.footer_block {
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+
+.footer_span {
+  color: red;
+  font-family: 'Ranchers', cursive;
+}
+
+/* 
+Media Querries 
+*/
+
+@media screen  and (max-width: 800px) { 
+  
+  
+  .wrapper {
+    width: 100vw;
+    padding: 0;
+  }
+
+  .navi {
+    flex-direction: column;
+  }
+
+  .navi-btn {
+    text-align: center;
+    margin: 5px;
+  }
+  
+  h1 {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  h1:after {
+    display: none;
+  }
+  
+  .news {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .unit {
+    margin: 5px;
+  }
+
+}

@@ -1,0 +1,242 @@
+/*
+*** Overall styles ***
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url(../image/float_bg.jpg);
+  background-size: cover;
+}
+
+/*
+*** Clearfix ***
+*/
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*
+*** First section styles ***
+*/
+
+.wrapper {
+  background-color: rgba(46, 37, 37, 0.95);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.3);
+  width: 70vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/*
+*** Navigation button (+ hover) styles ***
+*/
+
+nav {
+  text-align: right;
+}
+
+.navi {
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  list-style-type: none;
+  transition: all .3s;
+  margin: 20px 3% 0 0;
+}
+
+.navi-btn {
+  float: right;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 2px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navi-btn:hover {
+  border: 1px solid rgb(184, 104, 0);
+  background-color: rgb(184, 104, 0);
+}
+
+.btn-color {
+  color:rgb(184, 104, 0);
+  font-weight: 700;
+}
+
+.navi-btn:hover .btn-color {
+transition: all .3s;
+color: rgb(255, 255, 255);
+}
+
+/* 
+Heading styles 
+*/
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 60px auto;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 3%;
+  height: 0.5px;
+  width: 94%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 
+NEWS 
+*/
+
+.rfloated {
+  text-align: justify;
+  width: 22%;
+  float: right;
+  padding: 5px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin-right: 3%;
+}
+
+.center {
+  margin-left: 26%;
+  margin-right: 26%;
+  text-align: justify;
+  padding: 5px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.lfloated {
+  text-align: justify;
+  width: 22%;
+  float: left;
+  padding: 5px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin-left: 3%;
+}
+
+.right {
+  float: right;
+  width: 46%;
+  text-align: justify;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin-right: 3%;
+  padding: 5px;
+}
+
+.left {
+  float: left;
+  width: 46%;
+  text-align: justify;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin-left: 3%;
+  padding: 5px;
+}
+
+/* 
+Banner 
+*/
+
+.banner {
+  text-align: center;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin: 35px 0;
+  padding: 35px 0;;
+}
+
+.img_banner {
+  width: 30vw;
+}
+
+/* 
+Footer 
+*/
+
+footer {
+  background-color: rgba(0,0,0,0.8);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding-top: 8vh;
+  font-size: 32px;
+  padding-bottom: 5%;
+  margin-top: 35px;
+}
+
+.footer_text {
+  font-family: 'Ranchers', cursive;
+}
+
+.footer_block {
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+
+.footer_span {
+  color: red;
+  font-family: 'Ranchers', cursive;
+}
+
+/* 
+Media Querries 
+*/
+
+@media screen  and (max-width: 800px) {
+
+  .wrapper {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navi-btn {
+    width: 90vw;
+    text-align: center;
+    margin: 5px;
+  }
+
+  h1 {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  h1:after {
+    display: none;
+  }
+
+  .news {
+    text-align: center;
+  }
+
+  .right, .left, .lfloated, .rfloated, .center {
+    width: 100vw;
+    float: none;
+    padding: 10px;
+    margin: 5px auto;
+
+  }
+
+  .img_banner {
+    width: 100vw;
+  }
+
+  .footer_block {
+    transform: rotate(0deg);
+  }
+
+}
